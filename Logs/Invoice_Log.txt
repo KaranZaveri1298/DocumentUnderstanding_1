@@ -1,0 +1,240 @@
+﻿02/24/2022 16:16:23 - Document Understanding-Invoice Robot - Init All Applications
+02/24/2022 16:16:24 - Document Understanding-Invoice Robot - Processing Document: Input\BrennerOilCompany-BJsWholesaleClub_383-Invoice-D125920-20200909-140029.pdf
+02/24/2022 16:16:24 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:16:25 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:16:27 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:16:32 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:16:51 - Document Understanding-Invoice Robot - Processing Document: Input\BrennerOilCompany-BJsWholesaleClub_385-Invoice-D127508-20200921-152847.pdf
+02/24/2022 16:16:51 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:16:51 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:16:52 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:17:01 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:17:15 - Document Understanding-Invoice Robot - Processing Document: Input\BrennerOilCompany-Multi-BJsWholesaleCl-Invoice-Multi-D124593-20200901-141609_pg_1-1.pdf
+02/24/2022 16:17:15 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:17:15 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:17:16 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:17:19 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:17:34 - Document Understanding-Invoice Robot - Processing Document: Input\BrennerOilCompany-Multi-BJsWholesaleCl-Invoice-Multi-D124593-20200901-141609_pg_3-3.pdf
+02/24/2022 16:17:34 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:17:34 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:17:35 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:17:40 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:17:52 - Document Understanding-Invoice Robot - Processing Document: Input\BrennerOilCompany-Multi-BJsWholesaleCl-Invoice-Multi-D125264-20200908-151558_pg_2-2.pdf
+02/24/2022 16:17:52 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:17:52 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:17:53 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:17:59 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:18:09 - Document Understanding-Invoice Robot - Processing Document: Input\einv9370004_09232020_216298216300216301216302_pg_1-1.pdf
+02/24/2022 16:18:09 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:18:10 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:18:11 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:18:15 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:18:42 - Document Understanding-Invoice Robot - Processing Document: Input\einv9370004_09232020_216298216300216301216302_pg_3-3.pdf
+02/24/2022 16:18:42 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:18:42 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:18:43 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:18:46 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:18:56 - Document Understanding-Invoice Robot - Processing Document: Input\einv9370004_09242020_216400216401_pg_1-1.pdf
+02/24/2022 16:18:57 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:18:57 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:18:58 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:19:02 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:19:19 - Document Understanding-Invoice Robot - Processing Document: Input\einv9370004_09252020_216447216451216452_pg_1-1.pdf
+02/24/2022 16:19:19 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:19:19 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:19:20 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:19:23 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:19:33 - Document Understanding-Invoice Robot - Processing Document: Input\island freight.pdf
+02/24/2022 16:19:33 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:19:39 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:19:40 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:19:44 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:20:33 - Document Understanding-Invoice Robot - Processing Document: Input\island freight_2.pdf
+02/24/2022 16:20:33 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:20:37 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:20:38 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:20:44 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:20:54 - Document Understanding-Invoice Robot - Processing Document: Input\jp noonan 031018040.pdf
+02/24/2022 16:20:54 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:20:55 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:20:56 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:20:59 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:21:52 - Document Understanding-Invoice Robot - Processing Document: Input\jp noonan freight 031011160.pdf
+02/24/2022 16:21:52 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:21:52 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:21:54 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:22:00 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:23:40 - Document Understanding-Invoice Robot - Processing Document: Input\ODB5318_2.pdf
+02/24/2022 16:23:40 - Document Understanding-Invoice Robot - Digitizing the document
+02/24/2022 16:23:41 - Document Understanding-Invoice Robot - Classifying the document
+02/24/2022 16:23:43 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:23:47 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:25:58 - Document Understanding-Invoice Robot - Extracting data from the document
+02/24/2022 16:26:02 - Document Understanding-Invoice Robot - Validating results
+02/24/2022 16:29:02 - Document Understanding-Invoice Robot - Validation Error: Cannot find table 3., Source: System.Data, StackTrace:    at System.Data.DataTableCollection.get_Item(Int32 index)
+   at lambda_method(Closure , ActivityContext )
+   at Microsoft.VisualBasic.Activities.VisualBasicValue`1.Execute(CodeActivityContext context)
+   at System.Activities.CodeActivity`1.InternalExecuteInResolutionContext(CodeActivityContext context)
+   at System.Activities.Runtime.ActivityExecutor.ExecuteInResolutionContext[T](ActivityInstance parentInstance, Activity`1 expressionActivity)
+   at System.Activities.InArgument`1.TryPopulateValue(LocationEnvironment targetEnvironment, ActivityInstance activityInstance, ActivityExecutor executor)
+   at System.Activities.RuntimeArgument.TryPopulateValue(LocationEnvironment targetEnvironment, ActivityInstance targetActivityInstance, ActivityExecutor executor, Object argumentValueOverride, Location resultLocation, Boolean skipFastPath)
+   at System.Activities.ActivityInstance.InternalTryPopulateArgumentValueOrScheduleExpression(RuntimeArgument argument, Int32 nextArgumentIndex, ActivityExecutor executor, IDictionary`2 argumentValueOverrides, Location resultLocation, Boolean isDynamicUpdate)
+   at System.Activities.ActivityInstance.ResolveArguments(ActivityExecutor executor, IDictionary`2 argumentValueOverrides, Location resultLocation, Int32 startIndex)
+   at System.Activities.Runtime.ActivityExecutor.ExecuteActivityWorkItem.ExecuteBody(ActivityExecutor executor, BookmarkManager bookmarkManager, Location resultLocation)
+02/24/2022 16:29:03 - Document Understanding-Invoice Robot - Processing Document: Input\ODB5425_2.pdf
+02/24/2022 16:29:03 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:10:04 - Document Understanding-Invoice Robot - Init All Applications
+02/25/2022 11:10:05 - Document Understanding-Invoice Robot - Processing Document: Input\BrennerOilCompany-BJsWholesaleClub_383-Invoice-D125920-20200909-140029.pdf
+02/25/2022 11:10:05 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:10:07 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:10:09 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:10:15 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:11:48 - Document Understanding-Invoice Robot - Init All Applications
+02/25/2022 11:11:49 - Document Understanding-Invoice Robot - Processing Document: Input\BrennerOilCompany-BJsWholesaleClub_383-Invoice-D125920-20200909-140029.pdf
+02/25/2022 11:11:49 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:11:51 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:11:53 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:11:59 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:12:01 - Document Understanding-Invoice Robot - Processing Document: Input\BrennerOilCompany-BJsWholesaleClub_385-Invoice-D127508-20200921-152847.pdf
+02/25/2022 11:12:01 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:12:02 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:12:03 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:12:09 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:12:10 - Document Understanding-Invoice Robot - Processing Document: Input\BrennerOilCompany-Multi-BJsWholesaleCl-Invoice-Multi-D124593-20200901-141609_pg_1-1.pdf
+02/25/2022 11:12:10 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:12:10 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:12:11 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:12:15 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:12:17 - Document Understanding-Invoice Robot - Processing Document: Input\BrennerOilCompany-Multi-BJsWholesaleCl-Invoice-Multi-D124593-20200901-141609_pg_3-3.pdf
+02/25/2022 11:12:17 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:12:17 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:12:18 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:12:24 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:12:25 - Document Understanding-Invoice Robot - Processing Document: Input\BrennerOilCompany-Multi-BJsWholesaleCl-Invoice-Multi-D125264-20200908-151558_pg_2-2.pdf
+02/25/2022 11:12:25 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:12:26 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:12:27 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:12:33 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:12:34 - Document Understanding-Invoice Robot - Processing Document: Input\einv9370004_09232020_216298216300216301216302_pg_1-1.pdf
+02/25/2022 11:12:34 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:12:35 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:12:36 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:12:43 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:12:45 - Document Understanding-Invoice Robot - Processing Document: Input\einv9370004_09232020_216298216300216301216302_pg_3-3.pdf
+02/25/2022 11:12:45 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:12:45 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:12:47 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:12:52 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:12:53 - Document Understanding-Invoice Robot - Processing Document: Input\einv9370004_09242020_216400216401_pg_1-1.pdf
+02/25/2022 11:12:53 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:12:54 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:12:54 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:13:00 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:13:02 - Document Understanding-Invoice Robot - Processing Document: Input\einv9370004_09252020_216447216451216452_pg_1-1.pdf
+02/25/2022 11:13:02 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:13:03 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:13:04 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:13:08 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:13:09 - Document Understanding-Invoice Robot - Processing Document: Input\island freight.pdf
+02/25/2022 11:13:09 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:13:18 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:13:19 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:13:24 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:13:25 - Document Understanding-Invoice Robot - Processing Document: Input\island freight_2.pdf
+02/25/2022 11:13:25 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:13:32 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:13:33 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:13:39 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:13:40 - Document Understanding-Invoice Robot - Processing Document: Input\jp noonan 031018040.pdf
+02/25/2022 11:13:40 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:13:40 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:13:41 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:13:46 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:13:52 - Document Understanding-Invoice Robot - Processing Document: Input\jp noonan freight 031011160.pdf
+02/25/2022 11:13:52 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:13:52 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:13:53 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:13:58 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:14:02 - Document Understanding-Invoice Robot - Processing Document: Input\ODB5318_2.pdf
+02/25/2022 11:14:02 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:14:04 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:14:05 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:14:10 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:14:15 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:14:19 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:14:26 - Document Understanding-Invoice Robot - Processing Document: Input\ODB5425_2.pdf
+02/25/2022 11:14:26 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:14:27 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:14:28 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:14:33 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:14:38 - Document Understanding-Invoice Robot - Processing Document: Input\ODB5542_2.pdf
+02/25/2022 11:14:38 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:14:38 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:14:40 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:14:45 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:14:50 - Document Understanding-Invoice Robot - Processing Document: Input\Samuel 10.pdf
+02/25/2022 11:14:50 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:15:02 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:15:03 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:15:08 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:15:08 - Document Understanding-Invoice Robot - Processing Document: Input\Samuel 14.pdf
+02/25/2022 11:15:09 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:15:14 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:15:15 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:15:21 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:16:48 - Document Understanding-Invoice Robot - Processing Document: Input\Samuel 20.pdf
+02/25/2022 11:16:48 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:17:00 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:17:01 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:17:07 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:17:08 - Document Understanding-Invoice Robot - Processing Document: Input\Samuel 45.pdf
+02/25/2022 11:17:08 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:17:14 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:17:15 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:17:20 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:17:21 - Document Understanding-Invoice Robot - Processing Document: Input\Sprague 20391951.pdf
+02/25/2022 11:17:21 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:17:22 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:17:23 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:17:29 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:17:31 - Document Understanding-Invoice Robot - Processing Document: Input\Sprague1.pdf
+02/25/2022 11:17:31 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:17:32 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:17:33 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:17:38 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:17:39 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:17:45 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:17:51 - Document Understanding-Invoice Robot - Processing Document: Input\Sprague3.pdf
+02/25/2022 11:17:51 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:17:52 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:17:53 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:18:00 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:18:00 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:18:07 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:18:11 - Document Understanding-Invoice Robot - Processing Document: Input\USOil2.pdf
+02/25/2022 11:18:11 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:18:12 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:18:13 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:18:16 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:18:21 - Document Understanding-Invoice Robot - Processing Document: Input\USOil4.pdf
+02/25/2022 11:18:21 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:18:22 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:18:22 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:18:26 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:18:31 - Document Understanding-Invoice Robot - Processing Document: Input\VICS2064307_TRUCKS_.pdf
+02/25/2022 11:18:31 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:18:32 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:18:33 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:18:48 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:18:49 - Document Understanding-Invoice Robot - Processing Document: Input\VICS2064335_TRUCKS_.pdf
+02/25/2022 11:18:49 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:18:50 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:18:51 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:19:03 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:19:22 - Document Understanding-Invoice Robot - Processing Document: Input\VICS2064361_TRUCKS_.pdf
+02/25/2022 11:19:22 - Document Understanding-Invoice Robot - Digitizing the document
+02/25/2022 11:19:23 - Document Understanding-Invoice Robot - Classifying the document
+02/25/2022 11:19:24 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:19:34 - Document Understanding-Invoice Robot - Validating results
+02/25/2022 11:19:38 - Document Understanding-Invoice Robot - Extracting data from the document
+02/25/2022 11:19:46 - Document Understanding-Invoice Robot - Validating results

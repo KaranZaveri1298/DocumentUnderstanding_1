@@ -1,0 +1,195 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DataExtraction" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p1="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p3="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p4="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ClassificationResult" Type="InArgument(p:ClassificationResult[])" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_CustomLogFile" Type="InArgument(x:String)" />
+    <x:Property Name="in_TransactionItem" Type="InArgument(x:String)" />
+    <x:Property Name="in_Taxanomy" Type="InArgument(p1:DocumentTaxonomy)" />
+    <x:Property Name="in_Text" Type="InArgument(x:String)" />
+    <x:Property Name="in_Dom" Type="InArgument(p2:Document)" />
+    <x:Property Name="out_ExtractionResult" Type="OutArgument(p:ExtractionResult)" />
+    <x:Property Name="in_Classification" Type="InArgument(p:ClassificationResult)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>974,1181.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>DataExtraction_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DataExtraction</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities.Editors</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="50">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="DataExtraction" sap:VirtualizedContainerService.HintSize="984,1116.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <If Condition="[in_ClassificationResult.Any]" DisplayName="Data Extraction" sap:VirtualizedContainerService.HintSize="942,1024.66666666667" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="562,862" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Info_Log workflow" sap:VirtualizedContainerService.HintSize="520,113.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Processes\Info_Log.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_CustomLogFilePath">[in_CustomLogFile]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_InfoLogMessage">Extracting data from the document</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <Sequence DisplayName="Data Extraction Scope" sap:VirtualizedContainerService.HintSize="520,616.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p3:DataExtractionScope DocumentTypeId="{x:Null}" ClassificationResult="[in_Classification]" DisplayName="Data Extraction Scope" DocumentObjectModel="[in_Dom]" DocumentPath="[in_TransactionItem]" DocumentText="[in_Text]" ExtractionResult="[out_ExtractionResult]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="478,524.666666666667" sap2010:WorkflowViewState.IdRef="DataExtractionScope_1" Taxonomy="[in_Taxanomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI7fe4ba2d780749e0b31124665375accb&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Fuelsmart.Carrier.BrennerOilCompany&quot;:{&quot;FieldMappings&quot;:{&quot;Fuelsmart.Carrier.BrennerOilCompany.vendor_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.BrennerOilCompany.vendor_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.BrennerOilCompany.invoice_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.BrennerOilCompany.invoice_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.BrennerOilCompany.date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.BrennerOilCompany.date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.BrennerOilCompany.due_date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.BrennerOilCompany.due_date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;due-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.BrennerOilCompany.total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.BrennerOilCompany.total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.BrennerOilCompany.pay_terms&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.BrennerOilCompany.pay_terms&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;payment-terms\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.BrennerOilCompany.bol&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.BrennerOilCompany.bol&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.BrennerOilCompany.bol_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.BrennerOilCompany.bol_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.BrennerOilCompany.bol_items.line_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.BrennerOilCompany.bol_items.line_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol-line-items\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Fuelsmart.Carrier.Island&quot;:{&quot;FieldMappings&quot;:{&quot;Fuelsmart.Carrier.Island.vendor_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Island.vendor_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Island.invoice_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Island.invoice_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Island.date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Island.date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Island.due_date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Island.due_date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;due-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Island.total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Island.total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Island.pay_terms&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Island.pay_terms&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;payment-terms\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Island.bol&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Island.bol&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Island.bol_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Island.bol_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Island.bol_items.line_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Island.bol_items.line_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol-line-items\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Fuelsmart.Carrier.ReidPetroleum&quot;:{&quot;FieldMappings&quot;:{&quot;Fuelsmart.Carrier.ReidPetroleum.vendor_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.ReidPetroleum.vendor_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.ReidPetroleum.invoice_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.ReidPetroleum.invoice_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.ReidPetroleum.date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.ReidPetroleum.date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.ReidPetroleum.due_date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.ReidPetroleum.due_date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;due-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.ReidPetroleum.total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.ReidPetroleum.total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.ReidPetroleum.pay_terms&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.ReidPetroleum.pay_terms&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;payment-terms\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.ReidPetroleum.bol&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.ReidPetroleum.bol&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.ReidPetroleum.bol_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.ReidPetroleum.bol_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.ReidPetroleum.bol_items.line_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.ReidPetroleum.bol_items.line_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol-line-items\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Fuelsmart.Carrier.Sprague&quot;:{&quot;FieldMappings&quot;:{&quot;Fuelsmart.Carrier.Sprague.vendor_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Sprague.vendor_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Sprague.invoice_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Sprague.invoice_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Sprague.date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Sprague.date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Sprague.due_date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Sprague.due_date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;due-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Sprague.total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Sprague.total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Sprague.pay_terms&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Sprague.pay_terms&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;payment-terms\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Sprague.bol&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Sprague.bol&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Sprague.bol_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Sprague.bol_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Carrier.Sprague.bol_items.line_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Carrier.Sprague.bol_items.line_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol-line-items\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Fuelsmart.Supplier.PROEnergyLLC&quot;:{&quot;FieldMappings&quot;:{&quot;Fuelsmart.Supplier.PROEnergyLLC.vendor_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.PROEnergyLLC.vendor_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.PROEnergyLLC.invoice_number&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.PROEnergyLLC.invoice_number&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.PROEnergyLLC.invoice_date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.PROEnergyLLC.invoice_date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.PROEnergyLLC.due_date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.PROEnergyLLC.due_date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;due-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.PROEnergyLLC.total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.PROEnergyLLC.total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.PROEnergyLLC.payment_terms&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.PROEnergyLLC.payment_terms&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;payment-terms\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.PROEnergyLLC.bol&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.PROEnergyLLC.bol&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.PROEnergyLLC.bol_line_item&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.PROEnergyLLC.bol_line_item&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.PROEnergyLLC.bol_line_item.line_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.PROEnergyLLC.bol_line_item.line_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol-line-items\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Fuelsmart.Supplier.Samuel&quot;:{&quot;FieldMappings&quot;:{&quot;Fuelsmart.Supplier.Samuel.vendor_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Samuel.vendor_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Samuel.invoice_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Samuel.invoice_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Samuel.date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Samuel.date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Samuel.due_date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Samuel.due_date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;due-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Samuel.total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Samuel.total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Samuel.pay_terms&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Samuel.pay_terms&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;payment-terms\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Samuel.bol&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Samuel.bol&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Samuel.bol_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Samuel.bol_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Samuel.bol_items.line_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Samuel.bol_items.line_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol-line-items\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Fuelsmart.Supplier.JPNoonan&quot;:{&quot;FieldMappings&quot;:{&quot;Fuelsmart.Supplier.JPNoonan.vendor_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.JPNoonan.vendor_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.JPNoonan.invoice_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.JPNoonan.invoice_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.JPNoonan.date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.JPNoonan.date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.JPNoonan.due_date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.JPNoonan.due_date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;due-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.JPNoonan.total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.JPNoonan.total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.JPNoonan.pay_terms&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.JPNoonan.pay_terms&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;payment-terms\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.JPNoonan.bol&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.JPNoonan.bol&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.JPNoonan.bol_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.JPNoonan.bol_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.JPNoonan.bol_items.line_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.JPNoonan.bol_items.line_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol-line-items\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Fuelsmart.Supplier.USOil&quot;:{&quot;FieldMappings&quot;:{&quot;Fuelsmart.Supplier.USOil.vendor_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.USOil.vendor_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.USOil.invoice_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.USOil.invoice_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.USOil.date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.USOil.date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.USOil.due_date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.USOil.due_date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;due-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.USOil.total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.USOil.total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.USOil.pay_terms&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.USOil.pay_terms&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;payment-terms\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.USOil.bol&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.USOil.bol&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.USOil.bol_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.USOil.bol_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.USOil.bol_items.line_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.USOil.bol_items.line_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol-line-items\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Fuelsmart.Supplier.Vitol&quot;:{&quot;FieldMappings&quot;:{&quot;Fuelsmart.Supplier.Vitol.vendor_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Vitol.vendor_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Vitol.invoice_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Vitol.invoice_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Vitol.date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Vitol.date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Vitol.due_date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Vitol.due_date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;due-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Vitol.total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Vitol.total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Vitol.pay_terms&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Vitol.pay_terms&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;payment-terms\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Vitol.bol&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Vitol.bol&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Vitol.bol_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Vitol.bol_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Fuelsmart.Supplier.Vitol.bol_items.line_items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Fuelsmart.Supplier.Vitol.bol_items.line_items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bol-line-items\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI7fe4ba2d780749e0b31124665375accb&quot;:&quot;70&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI7fe4ba2d780749e0b31124665375accb&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;invoice-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;due-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;payment-terms&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bol&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;bol-line-items&quot;,&quot;SubOptions&quot;:null}]}]}]}}">
+              <p3:DataExtractionScope.Extractors>
+                <p4:MachineLearningExtractor Endpoint="{x:Null}" ApiKey="UmXMA7jg4jxs7T44DrWUyR9qp4+XZkpoC1ZoKM+8alvLuWKIrD+MumqqPKo85VdqBxawKgJl09mcmBMSwqbN2w==" Configuration="{}{&quot;Endpoint&quot;:&quot;&quot;,&quot;ApiKey&quot;:&quot;UmXMA7jg4jxs7T44DrWUyR9qp4+XZkpoC1ZoKM+8alvLuWKIrD+MumqqPKo85VdqBxawKgJl09mcmBMSwqbN2w==&quot;,&quot;SelectedMLSkill&quot;:&quot;DocumentUnderstanding&quot;,&quot;AvailableMLSkills&quot;:[&quot;DocumentUnderstanding&quot;]}" DisplayName="Machine Learning Extractor" sap:VirtualizedContainerService.HintSize="234,196" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_4" PersistenceId="UI7fe4ba2d780749e0b31124665375accb" RetryOnFailure="True" SelectedMLSkill="DocumentUnderstanding" Timeout="100000" UseServerSideOCR="False">
+                  <p4:MachineLearningExtractor.AvailableMLSkills>
+                    <scg:List x:TypeArguments="x:String" Capacity="1">
+                      <x:String>DocumentUnderstanding</x:String>
+                    </scg:List>
+                  </p4:MachineLearningExtractor.AvailableMLSkills>
+                  <p4:MachineLearningExtractor.DocumentBounds>
+                    <InArgument x:TypeArguments="p:ResultsDocumentBounds">
+                      <DelegateArgumentValue x:TypeArguments="p:ResultsDocumentBounds">
+                        <DelegateInArgument x:TypeArguments="p:ResultsDocumentBounds" Name="DocumentBounds" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p4:MachineLearningExtractor.DocumentBounds>
+                  <p4:MachineLearningExtractor.DocumentObjectModel>
+                    <InArgument x:TypeArguments="p2:Document">
+                      <DelegateArgumentValue x:TypeArguments="p2:Document">
+                        <DelegateInArgument x:TypeArguments="p2:Document" Name="DocumentObjectModel" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p4:MachineLearningExtractor.DocumentObjectModel>
+                  <p4:MachineLearningExtractor.DocumentPath>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p4:MachineLearningExtractor.DocumentPath>
+                  <p4:MachineLearningExtractor.DocumentText>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p4:MachineLearningExtractor.DocumentText>
+                  <p4:MachineLearningExtractor.ExtractorDocumentType>
+                    <InArgument x:TypeArguments="p5:ExtractorDocumentType">
+                      <DelegateArgumentValue x:TypeArguments="p5:ExtractorDocumentType">
+                        <DelegateInArgument x:TypeArguments="p5:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p4:MachineLearningExtractor.ExtractorDocumentType>
+                  <p4:MachineLearningExtractor.ExtractorResult>
+                    <OutArgument x:TypeArguments="p5:ExtractorResult">
+                      <DelegateArgumentReference x:TypeArguments="p5:ExtractorResult">
+                        <DelegateOutArgument x:TypeArguments="p5:ExtractorResult" Name="ExtractorResult" />
+                      </DelegateArgumentReference>
+                    </OutArgument>
+                  </p4:MachineLearningExtractor.ExtractorResult>
+                </p4:MachineLearningExtractor>
+              </p3:DataExtractionScope.Extractors>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p3:DataExtractionScope>
+          </Sequence>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Info_Log workflow" sap:VirtualizedContainerService.HintSize="334,113.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Processes\Info_Log.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_CustomLogFilePath">[in_CustomLogFile]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_InfoLogMessage">The workflow was not able to classify the document</InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>
